@@ -18,7 +18,8 @@ export default {
 </script>
 
 <template>
-  <nav>
+  <!-- Main Row -->
+  <nav class="first-row">
     <RouterLink
       style="text-decoration: none; color: inherit; padding-right: 20px"
       to="/"
@@ -29,30 +30,41 @@ export default {
       style="text-decoration: none; color: inherit; padding-right: 20px"
       to="/viewAllAccs"
     >
-      Account Display
+      Display All Accounts
     </RouterLink>
-
     <RouterLink
-      style="text-decoration: none; color: inherit; padding-left: 20px"
+      style="
+        text-decoration: none;
+        color: white;
+        float: right;
+        padding-left: 20px;
+        padding-right: 10px;
+      "
       to="/signup"
     >
       Sign-up
     </RouterLink>
 
     <RouterLink
-      style="text-decoration: none; color: inherit; padding-left: 20px"
+      style="
+        text-decoration: none;
+        color: white;
+        float: right;
+        padding-left: 20px;
+      "
       to="/signin"
     >
       Sign-in
     </RouterLink>
-    <RouterLink
-      style="text-decoration: none; color: inherit; padding-left: 20px"
-      to="/signout"
-    >
-      Sign-out
-    </RouterLink>
   </nav>
-  <nav>
+  <!-- Signed in row-->
+  <RouterLink
+    style="text-decoration: none; color: inherit; padding-left: 20px"
+    to="/signout"
+  >
+    Sign-out
+  </RouterLink>
+  <nav v-if="user.isSignedIn === true">
     <RouterLink
       style="text-decoration: none; color: inherit; padding-left: 20px"
       to="/createActivity"
@@ -103,5 +115,9 @@ nav {
 nav {
   text-align: center;
   font-size: 30px;
+}
+.first-row > RouterLink:last-child {
+  color: red;
+  float: right;
 }
 </style>
