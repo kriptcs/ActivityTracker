@@ -19,7 +19,7 @@ export default {
 
 <template>
   <!-- Main Row -->
-  <nav class="first-row">
+  <nav class="row-styling">
     <RouterLink
       style="text-decoration: none; color: inherit; padding-right: 20px"
       to="/"
@@ -32,39 +32,44 @@ export default {
     >
       Display All Accounts
     </RouterLink>
-    <RouterLink
-      style="
-        text-decoration: none;
-        color: white;
-        float: right;
-        padding-left: 20px;
-        padding-right: 10px;
-      "
-      to="/signup"
-    >
-      Sign-up
-    </RouterLink>
 
-    <RouterLink
-      style="
-        text-decoration: none;
-        color: white;
-        float: right;
-        padding-left: 20px;
-      "
-      to="/signin"
-    >
-      Sign-in
-    </RouterLink>
+    <!-- Register & Log In -->
+    <div v-if="user.isSignedIn === false">
+      <RouterLink
+        style="
+          text-decoration: none;
+          color: white;
+          float: right;
+          padding-left: 20px;
+          padding-right: 10px;
+        "
+        to="/signup"
+      >
+        Register
+      </RouterLink>
+
+      <RouterLink
+        style="
+          text-decoration: none;
+          color: white;
+          float: right;
+          padding-left: 20px;
+        "
+        to="/signin"
+      >
+        Log In
+      </RouterLink>
+    </div>
   </nav>
   <!-- Signed in row-->
-  <RouterLink
-    style="text-decoration: none; color: inherit; padding-left: 20px"
-    to="/signout"
-  >
-    Sign-out
-  </RouterLink>
-  <nav v-if="user.isSignedIn === true">
+
+  <nav v-if="user.isSignedIn === true" class="row-styling">
+    <RouterLink
+      style="text-decoration: none; color: inherit; padding-left: 20px"
+      to="/signout"
+    >
+      Sign-out
+    </RouterLink>
     <RouterLink
       style="text-decoration: none; color: inherit; padding-left: 20px"
       to="/createActivity"
@@ -85,10 +90,7 @@ export default {
       View own activities
     </RouterLink>
   </nav>
-  <div class="sign">
-    <div v-if="user.isSignedIn">Welcome {{ this.user.username }}</div>
-    <div v-else>You are not signed in :(</div>
-  </div>
+
   <main>
     <RouterView :user="user" />
   </main>
@@ -96,28 +98,26 @@ export default {
 </template>
 
 <style scoped>
-nav {
-  background-color: rgb(46, 0, 91);
-  color: white;
+.row-styling {
+  overflow: hidden;
+  background-color: #3498db;
 }
 
-.sign {
+.row-styling a {
+  float: left;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.row-styling a:hover {
+  background-color: #2ecc71;
+  color: black;
+}
+
+.row-styling a.active {
+  background-color: #04aa6d;
   color: white;
-  text-align: center;
-  margin-top: 20px;
-  font-size: 20px;
-}
-.Header {
-  color: rgb(8, 8, 158);
-  text-align: center;
-  font-size: 50px;
-}
-nav {
-  text-align: center;
-  font-size: 30px;
-}
-.first-row > RouterLink:last-child {
-  color: red;
-  float: right;
 }
 </style>

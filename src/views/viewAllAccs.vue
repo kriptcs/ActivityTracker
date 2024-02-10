@@ -35,28 +35,11 @@ export default {
         <br />
       </template>
     </ul>
-    <p>{{ errors }}</p>
+    <p v-if="this.errors[0]">{{ errors }}</p>
   </div>
 </template>
 
 <style scoped>
-.page {
-  background-color: rgb(0, 91, 0);
-}
-
-ul {
-  list-style-type: none;
-  text-align: center;
-  font-size: 25px;
-}
-
-h1 {
-  text-align: center;
-}
-
-p {
-  text-align: center;
-}
 a,
 a:hover,
 a:focus,

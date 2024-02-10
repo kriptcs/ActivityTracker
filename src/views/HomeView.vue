@@ -9,16 +9,4 @@ export default {};
   </div>
 </template>
 
-<style scoped>
-.page {
-  background-color: rgb(0, 91, 0);
-}
-
-h1 {
-  text-align: center;
-}
-
-p {
-  text-align: center;
-}
-</style>
+<style scoped></style>

@@ -16,7 +16,7 @@ template {
 }
 
 footer {
-  color: blue;
+  color: #2ecc71;
   font-size: 20px;
 }
 </style>

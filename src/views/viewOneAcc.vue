@@ -32,24 +32,4 @@ export default {
   </div>
 </template>
 
-<style scoped>
-.page {
-  background-color: rgb(0, 91, 0);
-}
-
-ul {
-  list-style-type: none;
-  text-align: center;
-  font-size: 25px;
-}
-
-h1,
-h2 {
-  text-align: center;
-}
-
-p {
-  text-align: center;
-  font-size: 25px;
-}
-</style>
+<style scoped></style>
