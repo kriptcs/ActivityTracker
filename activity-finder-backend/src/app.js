@@ -10,7 +10,7 @@ const MIN_PASSWORD_LENGTH = 6; // Should be higher, is low to facilitate testing
 
 const TITLE_MIN_LENGTH = 5;
 const TITLE_MAX_LENGTH = 50;
-const DESCRIPTION_MIN_LENGTH = 20;
+const DESCRIPTION_MIN_LENGTH = 1;
 const DESCRIPTION_MAX_LENGTH = 500;
 
 const ACCESS_TOKEN_SECRET = "sdfsdsd4flkjdsflkdsj";
@@ -313,7 +313,6 @@ app.post("/activities", function (request, response) {
   if (activity.startTime < Date.now()) {
     validationErrors.push("startTimeTooEarly");
   }
-
   if (activity.endTime < activity.startTime) {
     validationErrors.push("endingBeforeStarting");
   }

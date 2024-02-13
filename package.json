@@ -7,6 +7,7 @@
     "preview": "vite preview --port 4173"
   },
   "dependencies": {
+    "@mobiscroll/vue": "npm:@mobiscroll/vue-trial@^5.28.3",
     "jwt-decode": "^3.1.2",
     "vue": "^3.2.37",
     "vue-router": "^4.1.3"

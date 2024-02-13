@@ -60,35 +60,40 @@ export default {
         Log In
       </RouterLink>
     </div>
-  </nav>
-  <!-- Signed in row-->
+    <!-- Signed in row-->
 
-  <nav v-if="user.isSignedIn === true" class="row-styling">
-    <RouterLink
-      style="text-decoration: none; color: inherit; padding-left: 20px"
-      to="/signout"
-    >
-      Sign-out
-    </RouterLink>
-    <RouterLink
-      style="text-decoration: none; color: inherit; padding-left: 20px"
-      to="/createActivity"
-    >
-      Create Activity
-    </RouterLink>
-    <RouterLink
-      style="text-decoration: none; color: inherit; padding-left: 20px"
-      to="/viewAllActivities"
-    >
-      View all activities
-    </RouterLink>
+    <div v-if="user.isSignedIn === true">
+      <RouterLink
+        style="
+          text-decoration: none;
+          color: inherit;
+          float: right;
+          padding-left: 20px;
+        "
+        to="/signout"
+      >
+        Sign-out
+      </RouterLink>
+      <RouterLink
+        style="text-decoration: none; color: inherit; padding-left: 20px"
+        to="/createActivity"
+      >
+        Create Activity
+      </RouterLink>
+      <RouterLink
+        style="text-decoration: none; color: inherit; padding-left: 20px"
+        to="/viewAllActivities"
+      >
+        View all activities
+      </RouterLink>
 
-    <RouterLink
-      style="text-decoration: none; color: inherit; padding-left: 20px"
-      to="/viewOwnActivities"
-    >
-      View own activities
-    </RouterLink>
+      <RouterLink
+        style="text-decoration: none; color: inherit; padding-left: 20px"
+        to="/viewOwnActivities"
+      >
+        View own activities
+      </RouterLink>
+    </div>
   </nav>
 
   <main>

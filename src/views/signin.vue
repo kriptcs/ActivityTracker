@@ -50,7 +50,10 @@ export default {
 
 <template>
   <div v-if="accountSignedIn == 1">
-    <h2>Welcome {{ this.user.username }}! You have succesfully signed in!</h2>
+    <h2>
+      Welcome {{ this.user.username }}! You have succesfully signed in!
+      Redirecting you soon
+    </h2>
   </div>
   <div v-else class="page">
     <form>
