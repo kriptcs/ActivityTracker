@@ -40,7 +40,7 @@ export default {
       };
       setOptions({
         theme: "ios",
-        themeVariant: "light",
+        themeVariant: "dark",
       });
 
       createActivity(activity, (errors, id) => {
@@ -109,7 +109,9 @@ export default {
 
 <style scoped>
 .component-styling {
+  padding-top: 10px;
   color: red;
+  border-radius: 10px;
 }
 .input-font {
   font-family: "Lato", sans-serif;

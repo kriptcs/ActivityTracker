@@ -7,16 +7,15 @@ export default {
 </script>
 
 <template>
-  <footer>Copyright {{ copyrightYear }}</footer>
+  <footer class="footer">Copyright {{ copyrightYear }}</footer>
 </template>
 
 <style scoped>
-template {
-  position: relative;
-}
-
-footer {
+.footer {
   color: #2ecc71;
   font-size: 20px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
 }
 </style>

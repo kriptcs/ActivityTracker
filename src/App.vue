@@ -99,7 +99,7 @@ export default {
   <main>
     <RouterView :user="user" />
   </main>
-  <Footer :copyrightYear="2022"></Footer>
+  <Footer :copyrightYear="2024"></Footer>
 </template>
 
 <style scoped>
