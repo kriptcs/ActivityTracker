@@ -74,7 +74,6 @@ This section should list any major frameworks/libraries used to bootstrap your p
 - HTML
 - CSS
 - Vue.js
-- [Vue.js]: https://img.shields.io/badge/Vue.js-35495E?style=for-the-badge&logo=vuedotjs&logoColor=4FC08D
 - Node.js
 - Vite.js
 
@@ -95,15 +94,13 @@ To get a local copy up and running follow these simple example steps.
 
 Here is the list of programs that need to be installed to run it:
 
-- [![PHP(check compatibility between PHP version and other programs listed)][php]](https://www.php.net/downloads)
-- [![wampserver (for windows users)][windows-server]](https://wampserver.aviatechno.net/)
-- [![mampserver (for mac users)][mac-server]](https://www.mamp.info/en/downloads/)
+- Coming soon
 
 <!-- HOW TO -->
 
 ## How to get running
 
-1. Coming SOON
+1. Coming Soon
 
 <!-- CONTACT -->
 
