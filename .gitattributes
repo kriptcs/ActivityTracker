@@ -1,5 +1,2 @@
 # Auto detect text files and perform LF normalization
-*.js linguist-vendored=false
-*.vue linguist-language=Vue
-*.js linguist-language=Node
-/activity-finder-backend/* linguist-language=Node
+* text=auto
